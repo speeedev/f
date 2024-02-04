@@ -51,7 +51,7 @@ app.post('/login', async (req, res) => {
 
         if (user) {
             const token = generateToken(user);
-            res.json({ token, username });
+            res.status(200).json({ token, username });
         } else {
             res.status(401).json({ message: 'Email or password is incorrect.' });
         }
@@ -75,7 +75,7 @@ app.get('/secure', (req, res) => {
             return res.status(401).json({ message: 'Invalid token' });
         }
 
-        res.json({ message: 'Token is valid.', user: decoded });
+        res.status(200).json({ message: 'Token is valid.', user: decoded });
     });
 });
 
