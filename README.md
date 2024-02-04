@@ -1,0 +1,1 @@
+I wrote my own API service with Node.js and installed a JWT system in my Flutter application with this service. If you want to try the project, simply launch the Flutter application and the Node.js project after downloading the project. It depends on localhost.
