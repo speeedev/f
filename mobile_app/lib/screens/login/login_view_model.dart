@@ -19,8 +19,6 @@ class LoginViewModel extends ChangeNotifier {
 
       if (result["success"]) {
         token = result["token"];
-      } else {
-        showErrorDialog(context, result["error"]);
       }
     } finally {
       isLoading = false;
@@ -39,8 +37,6 @@ class LoginViewModel extends ChangeNotifier {
         print(result);
         username = result["username"];
         showUserInfoDialog(context, username);
-      } else {
-        showErrorDialog(context, result["error"]);
       }
     } finally {
       isLoading = false;
